@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="S.R.A Industries - Quality Sri Lankan Papadam from Wattala. Retail and wholesale enquiries welcome.">
+<meta name="theme-color" content="#07543d">
+<title>S.R.A Industries | Papadam.lk</title>
+
+<style>
+:root {
+  --green: #07543d;
+  --dark-green: #063d2e;
+  --gold: #d49325;
+  --cream: #fffaf1;
+  --text: #24352e;
+  --muted: #68746e;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0,0,0,.07);
+}
+
+.navbar {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 900;
+  color: var(--green);
+  white-space: nowrap;
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.order-button,
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green);
+  color: white;
+  padding: 13px 22px;
+  border-radius: 9px;
+  font-weight: 800;
+  border: 2px solid var(--green);
+  transition: .2s;
+}
+
+.order-button:hover,
+.primary-button:hover {
+  background: var(--dark-green);
+  transform: translateY(-2px);
+}
+
+.menu-toggle {
+  display: none;
+  background: var(--green);
+  color: white;
+  border: 0;
+  border-radius: 7px;
+  padding: 9px 13px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* HERO IMAGE */
+
+.hero {
+  padding: 30px 0 35px;
+  background: linear-gradient(120deg, #fff0d2, #f2f7e9);
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-height: 580px;
+  object-fit: contain;
+  border-radius: 15px;
+  background: #f5e6c9;
+}
+
+/* TRUST STRIP */
+
+.trust-strip {
+  background: var(--green);
+  color: white;
+  padding: 18px 0;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.trust-item strong {
+  display: block;
+  font-size: 15px;
+}
+
+.trust-item span {
+  font-size: 14px;
+  opacity: .95;
+}
+
+/* SECTION HEADINGS */
+
+.section {
+  padding: 75px 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  color: var(--dark-green);
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 8px 0;
+}
+
+.section-heading p {
+  color: var(--muted);
+}
+
+/* PRODUCTS */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0,0,0,.07);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 35px rgba(0,0,0,.11);
+}
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background: #f1e6d3;
+}
+
+.product-info {
+  padding: 21px;
+}
+
+.product-info h3 {
+  color: var(--green);
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.pack {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.price {
+  color: var(--gold);
+  font-size: 25px;
+  font-weight: 900;
+  margin: 12px 0 15px;
+}
+
+.product-order {
+  display: block;
+  text-align: center;
+  background: var(--green);
+  color: white;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 800;
+}
+
+.product-order:hover {
+  background: var(--dark-green);
+}
+
+/* WHOLESALE */
+
+.wholesale {
+  background: linear-gradient(120deg, #07543d, #0b6a4d);
+  color: white;
+  padding: 65px 20px;
+  text-align: center;
+}
+
+.wholesale h2 {
+  font-size: clamp(27px, 4vw, 38px);
+  margin-bottom: 12px;
+}
+
+.wholesale p {
+  max-width: 700px;
+  margin: 0 auto 22px;
+  color: #e5f2eb;
+}
+
+.wholesale .primary-button {
+  background: white;
+  color: var(--green);
+  border-color: white;
+}
+
+.wholesale .primary-button:hover {
+  background: #f4ead7;
+}
+
+/* PREPARATION */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.info-card {
+  background: white;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.info-card h3 {
+  color: var(--green);
+  margin-bottom: 12px;
+  font-size: 21px;
+}
+
+.info-card p {
+  color: var(--muted);
+}
+
+/* CONTACT */
+
+.contact {
+  background: #f4eddf;
+  padding: 65px 0;
+  text-align: center;
+}
+
+.contact h2 {
+  color: var(--green);
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.contact p {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  margin: 20px 0;
+  line-height: 2;
+}
+
+/* FOOTER */
+
+footer {
+  background: #052f24;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+}
+
+footer strong {
+  font-size: 20px;
+}
+
+footer p {
+  color: #d4e3dc;
+  font-size: 14px;
+  margin-top: 7px;
+}
+
+.footer-whatsapp {
+  display: inline-block;
+  margin-top: 12px;
+  color: #a9e8c7;
+  font-weight: bold;
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  background: #20bd68;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-weight: 900;
+  box-shadow: 0 5px 18px rgba(0,0,0,.2);
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .navbar {
+    min-height: 68px;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    box-shadow: 0 8px 15px rgba(0,0,0,.08);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .header-order {
+    display: none;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .product-image {
+    height: 210px;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero {
+    padding: 15px 0 20px;
+  }
+
+  .hero-image {
+    border-radius: 9px;
+  }
+
+  .trust-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image {
+    height: 250px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .whatsapp-float {
+    right: 12px;
+    bottom: 12px;
+    padding: 12px 16px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+
+    <a href="#home" class="logo">S.R.A <span>Industries</span></a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#preparation">Preparation & Storage</a>
+      <a href="#contact">Contact</a>
+      <a href="#wholesale">Wholesale</a>
+    </nav>
+
+    <a class="order-button header-order"
+       href="https://wa.me/94752601907?text=Hello%20S.R.A%20Industries%2C%20I%20would%20like%20to%20place%20an%20order."
+       target="_blank" rel="noopener">
+      Order Now
+    </a>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+  <div class="container">
+    <img
+      src="papadam-hero.png"
+      alt="S.R.A Industries crispy Sri Lankan papadam"
+      class="hero-image">
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+
+<section class="trust-strip">
+  <div class="container trust-grid">
+
+    <div class="trust-item">
+      <strong>🌾 Traditional Taste</strong>
+      <span>Sri Lankan papadam</span>
+    </div>
+
+    <div class="trust-item">
+      <strong>📦 Retail & Wholesale</strong>
+      <span>Enquiries welcome</span>
+    </div>
+
+    <div class="trust-item">
+      <strong>🚚 Islandwide COD Enquiry</strong>
+      <span>Delivery availability confirmed</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="section" id="shop">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Our Products</div>
+      <h2>Choose Your Papadam</h2>
+      <p>Fresh choices for home, retail and wholesale customers.</p>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- 1 BABY PAPADAM -->
+
+      <article class="product-card">
+        <img class="product-image"
+             src="baby-papadam.jpg"
+             alt="Baby Papadam"
+             loading="lazy">
+
+        <div class="product-info">
+          <h3>Baby Papadam</h3>
+          <p class="pack">50g Pack · Approximately 14 pieces</p>
+          <div class="price">Rs. 90/-</div>
+
+          <a class="product-order"
+             href="https://wa.me/94752601907?text=Hello%2C%20I%20want%20to%20order%20Baby%20Papadam%2050g%20-%20Rs.%2090."
+             target="_blank" rel="noopener">
+            Order on WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <!-- 2 REGULAR PAPADAM -->
+
+      <article class="product-card">
+        <img class="product-image"
+             src="regular-papadam.jpg"
+             alt="Regular Papadam"
+             loading="lazy">
+
+        <div class="product-info">
+          <h3>Regular Papadam</h3>
+          <p class="pack">100g Pack · Approximately 16 pieces</p>
+          <div class="price">Rs. 180/-</div>
+
+          <a class="product-order"
+             href="https://wa.me/94752601907?text=Hello%2C%20I%20want%20to%20order%20Regular%20Papadam%20100g%20-%20Rs.%20180."
+             target="_blank" rel="noopener">
+            Order on WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <!-- 3 PEPPER PAPADAM -->
+
+      <article class="product-card">
+        <img class="product-image"
+             src="pepper-papadam.jpg"
+             alt="Pepper Papadam"
+             loading="lazy">
+
+        <div class="product-info">
+          <h3>Pepper Papadam</h3>
+          <p class="pack">100g Pack · Approximately 10 pieces</p>
+          <div class="price">Rs. 210/-</div>
+
+          <a class="product-order"
+             href="https://wa.me/94752601907?text=Hello%2C%20I%20want%20to%20order%20Pepper%20Papadam%20100g%20-%20Rs.%20210."
+             target="_blank" rel="noopener">
+            Order on WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <!-- 4 CLASSIC PAPADAM -->
+
+      <article class="product-card">
+        <img class="product-image"
+             src="classic-papadam.png"
+             alt="Classic Papadam"
+             loading="lazy">
+
+        <div class="product-info">
+          <h3>Classic Papadam</h3>
+          <p class="pack">1kg Pack · Approximately 80 pieces</p>
+          <div class="price">Rs. 700/-</div>
+
+          <a class="product-order"
+             href="https://wa.me/94752601907?text=Hello%2C%20I%20want%20to%20order%20Classic%20Papadam%201kg%20-%20Rs.%20700."
+             target="_blank" rel="noopener">
+            Order on WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <!-- 5 CLASSIC BABY PAPADAM -->
+
+      <article class="product-card">
+        <img class="product-image"
+             src="classic-baby-papadam.png"
+             alt="Classic Baby Papadam with cumin seeds"
+             loading="lazy">
+
+        <div class="product-info">
+          <h3>Classic Baby Papadam</h3>
+          <p class="pack">1kg Pack · Approximately 240 pieces</p>
+          <div class="price">Rs. 900/-</div>
+
+          <a class="product-order"
+             href="https://wa.me/94752601907?text=Hello%2C%20I%20want%20to%20order%20Classic%20Baby%20Papadam%201kg%20-%20Rs.%20900."
+             target="_blank" rel="noopener">
+            Order on WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <!-- 6 JANATHA LARGE PAPADAM -->
+
+      <article class="product-card">
+        <img class="product-image"
+             src="janatha-large-papadam.jpg"
+             alt="Janatha Papadam Large Pack"
+             loading="lazy">
+
+        <div class="product-info">
+          <h3>Janatha Papadam Large Pack</h3>
+          <p class="pack">1kg Pack · Approximately 55 pieces</p>
+          <div class="price">Rs. 900/-</div>
+
+          <a class="product-order"
+             href="https://wa.me/94752601907?text=Hello%2C%20I%20want%20to%20order%20Janatha%20Papadam%20Large%20Pack%201kg%20-%20Rs.%20900."
+             target="_blank" rel="noopener">
+            Order on WhatsApp
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHOLESALE -->
+
+<section class="wholesale" id="wholesale">
+  <div class="container">
+
+    <h2>Wholesale Orders Welcome!</h2>
+
+    <p>
+      Buying in larger quantities? Enjoy lower prices on wholesale orders.
+      Contact S.R.A Industries directly for wholesale rates and availability.
+    </p>
+
+    <a class="primary-button"
+       href="https://wa.me/94752601907?text=Hello%20S.R.A%20Industries%2C%20I%20am%20interested%20in%20wholesale%20papadam%20prices."
+       target="_blank" rel="noopener">
+      Enquire for Wholesale Prices
+    </a>
+
+  </div>
+</section>
+
+<!-- PREPARATION AND STORAGE -->
+
+<section class="section" id="preparation">
+  <div class="container">
+
+    <div class="section-heading">
+      <div class="eyebrow">Helpful Information</div>
+      <h2>Preparation & Storage</h2>
+      <p>Simple tips for enjoying crispy papadam.</p>
+    </div>
+
+    <div class="info-grid">
+
+      <div class="info-card">
+        <h3>🍳 How to Prepare</h3>
+        <p>
+          Heat oil properly before frying. Fry papadam briefly until
+          it expands and becomes crispy. Remove carefully and allow
+          excess oil to drain.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>📦 How to Store</h3>
+        <p>
+          Keep uncooked papadam in its sealed packaging in a cool,
+          dry place. Protect it from moisture to maintain freshness
+          and quality.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+  <div class="container">
+
+    <h2>Contact S.R.A Industries</h2>
+
+    <p>For product enquiries, orders and wholesale prices, contact us directly.</p>
+
+    <div class="contact-details">
+      <strong>📍 Wattala, Sri Lanka</strong><br>
+      <strong>📱 WhatsApp: +94 75 260 1907</strong><br>
+      <strong>🚚 Islandwide COD enquiries welcome</strong>
+    </div>
+
+    <a class="primary-button"
+       href="https://wa.me/94752601907?text=Hello%20S.R.A%20Industries%2C%20I%20have%20an%20enquiry."
+       target="_blank" rel="noopener">
+      Chat with Us on WhatsApp
+    </a>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container">
+
+    <strong>S.R.A Industries</strong>
+
+    <p>Wattala, Sri Lanka</p>
+    <p>Crispy Tradition Delivered.</p>
+
+    <a class="footer-whatsapp"
+       href="https://wa.me/94752601907"
+       target="_blank" rel="noopener">
+      WhatsApp: +94 75 260 1907
+    </a>
+
+    <p>© <span id="year"></span> S.R.A Industries. All rights reserved.</p>
+
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+
+<a class="whatsapp-float"
+   href="https://wa.me/94752601907?text=Hello%20S.R.A%20Industries"
+   target="_blank" rel="noopener"
+   aria-label="Contact S.R.A Industries on WhatsApp">
+  WhatsApp
+</a>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function () {
+  navLinks.classList.toggle("open");
+  menuToggle.textContent =
+    navLinks.classList.contains("open") ? "✕" : "☰";
+});
+
+document.querySelectorAll(".nav-links a").forEach(function (link) {
+  link.addEventListener("click", function () {
+    navLinks.classList.remove("open");
+    menuToggle.textContent = "☰";
+  });
+});
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>

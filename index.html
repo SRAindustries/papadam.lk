@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="S.R.A Industries Wattala - Sri Lankan Papadam. Retail and wholesale orders.">
+<meta name="description" content="S.R.A Industries - Red Sun Papadam, Masala Papadam, Classic Papadam. Retail and wholesale orders in Sri Lanka.">
 <meta name="theme-color" content="#07543d">
 <title>S.R.A Industries | Papadam.lk</title>
 
@@ -14,6 +14,7 @@
   --dark:#063b2d;
   --gold:#d49325;
   --cream:#fffaf1;
+  --red:#c62828;
 }
 * {box-sizing:border-box;margin:0;padding:0}
 html {scroll-behavior:smooth}
@@ -38,7 +39,7 @@ header {
 }
 .logo {font-size:24px;font-weight:900;color:var(--green)}
 .logo span {color:var(--gold)}
-.nav-links {display:flex;align-items:center;gap:22px}
+.nav-links {display:flex;align-items:center;gap:18px}
 .nav-links a {font-size:14px;font-weight:bold;color:#26352e}
 .nav-links a:hover {color:var(--gold)}
 .menu-btn {
@@ -47,9 +48,10 @@ header {
   padding:8px 13px;font-size:22px;
 }
 .button {
-  display:inline-block;padding:13px 22px;
+  display:inline-block;padding:12px 20px;
   background:var(--green);color:white;
-  border-radius:9px;font-weight:bold;
+  border-radius:9px;font-weight:bold;border:0;
+  cursor:pointer;
 }
 .button:hover {background:var(--dark)}
 
@@ -71,13 +73,13 @@ header {
 }
 .trust strong {display:block}
 
-.section {padding:70px 0}
+.section {padding:65px 0}
 .heading {text-align:center;margin-bottom:35px}
 .heading small {
   color:var(--gold);font-weight:bold;
   letter-spacing:3px;text-transform:uppercase;
 }
-.heading h2 {font-size:36px;color:var(--dark);margin:7px 0}
+.heading h2 {font-size:34px;color:var(--dark);margin:7px 0}
 .heading p {color:#68746e}
 
 .products {
@@ -88,20 +90,28 @@ header {
   background:white;border-radius:15px;
   overflow:hidden;
   box-shadow:0 6px 24px #0000000d;
-  transition:transform .2s;
 }
-.card:hover {transform:translateY(-4px)}
 .card img {
   display:block;width:100%;height:245px;
   object-fit:contain;background:#f4ead8;
   padding:10px;
 }
 .details {padding:20px}
-.details h3 {font-size:20px;color:var(--green)}
+.details h3 {font-size:19px;color:var(--green)}
 .pack {font-size:14px;color:#68746e}
+.old-price {
+  color:#888;text-decoration:line-through;
+  font-size:16px;margin-top:10px;
+}
+.offer-label {
+  display:inline-block;background:#fff0e9;
+  color:#c62828;padding:4px 9px;
+  border-radius:5px;font-size:12px;
+  font-weight:bold;margin-top:10px;
+}
 .price {
-  color:var(--gold);font-size:25px;
-  font-weight:900;margin:12px 0;
+  color:var(--red);font-size:27px;
+  font-weight:900;margin:3px 0 13px;
 }
 .order {
   display:block;text-align:center;
@@ -115,9 +125,47 @@ header {
   background:linear-gradient(120deg,#07543d,#0b6a4d);
   color:white;text-align:center;padding:60px 20px;
 }
-.wholesale h2 {font-size:34px;margin-bottom:12px}
+.wholesale h2 {font-size:32px;margin-bottom:12px}
 .wholesale p {max-width:700px;margin:0 auto 22px}
 .wholesale .button {background:white;color:var(--green)}
+
+.order-section {background:#f2eadc}
+.order-box {
+  max-width:720px;margin:auto;
+  background:white;padding:28px;
+  border-radius:16px;
+  box-shadow:0 6px 25px #00000010;
+}
+.form-group {margin-bottom:17px}
+.form-group label {
+  display:block;font-weight:bold;
+  margin-bottom:7px;color:var(--dark);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width:100%;padding:13px;
+  border:1px solid #d7ded9;
+  border-radius:8px;font-size:16px;
+  font-family:inherit;background:white;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline:2px solid #83b69f;
+  border-color:var(--green);
+}
+.form-note {
+  font-size:13px;color:#68746e;
+  margin:10px 0 18px;
+}
+.order-submit {
+  width:100%;font-size:17px;
+  background:#159b53;color:white;
+  padding:15px;border:0;border-radius:9px;
+  font-weight:bold;cursor:pointer;
+}
+.order-submit:hover {background:#087b3c}
 
 .info-grid {
   display:grid;grid-template-columns:repeat(2,1fr);
@@ -133,7 +181,7 @@ header {
 .contact {
   background:#f2eadc;text-align:center;padding:55px 15px;
 }
-.contact h2 {font-size:32px;color:var(--green)}
+.contact h2 {font-size:30px;color:var(--green)}
 .contact p {margin:10px 0 18px;color:#68746e}
 
 footer {
@@ -164,16 +212,18 @@ footer a {color:#a9e8c7}
   .card img {height:210px}
 }
 @media(max-width:540px) {
-  .logo {font-size:20px}
+  .logo {font-size:19px}
+  .navbar > .button {padding:9px 11px;font-size:13px}
   .hero {padding:12px 0}
   .hero img {border-radius:8px}
   .trust-grid {grid-template-columns:1fr;gap:12px}
-  .section {padding:48px 0}
-  .heading h2 {font-size:29px}
+  .section {padding:45px 0}
+  .heading h2 {font-size:27px}
   .products {grid-template-columns:1fr}
   .card img {height:250px}
   .info-grid {grid-template-columns:1fr}
-  .wholesale h2 {font-size:28px}
+  .wholesale h2 {font-size:27px}
+  .order-box {padding:20px 15px}
 }
 </style>
 </head>
@@ -188,11 +238,12 @@ footer a {color:#a9e8c7}
     <nav class="nav-links" id="navLinks">
       <a href="#home">Home</a>
       <a href="#shop">Shop</a>
-      <a href="#preparation">Preparation & Storage</a>
+      <a href="#customer-order">Order</a>
+      <a href="#preparation">Preparation</a>
       <a href="#wholesale">Wholesale</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="button" href="https://wa.me/94752601907?text=Hello%20S.R.A%20Industries%2C%20I%20would%20like%20to%20order.">Order Now</a>
+    <a class="button" href="#customer-order">Order Now</a>
   </div>
 </header>
 
@@ -201,7 +252,7 @@ footer a {color:#a9e8c7}
 <section class="hero" id="home">
   <div class="container">
     <img src="papadam-hero.png"
-         alt="S.R.A Industries Sri Lankan Papadam"
+         alt="S.R.A Industries Papadam"
          fetchpriority="high">
   </div>
 </section>
@@ -209,7 +260,7 @@ footer a {color:#a9e8c7}
 <section class="trust">
   <div class="container trust-grid">
     <div><strong>🌾 Traditional Taste</strong>Sri Lankan Papadam</div>
-    <div><strong>📦 Retail & Wholesale</strong>Orders Welcome</div>
+    <div><strong>🏷️ Special Offers</strong>Great Prices</div>
     <div><strong>🚚 Islandwide COD Enquiry</strong>Availability confirmed</div>
   </div>
 </section>
@@ -219,71 +270,163 @@ footer a {color:#a9e8c7}
     <div class="heading">
       <small>Our Products</small>
       <h2>Choose Your Papadam</h2>
-      <p>Quality papadam for your home and business.</p>
+      <p>Special offer prices available now!</p>
     </div>
 
     <div class="products">
 
       <article class="card">
-        <img src="baby-papadam.jpg" alt="Baby Papadam" loading="lazy" decoding="async">
+        <img src="baby-papadam.jpg" alt="Red Sun Baby Papadam" loading="lazy">
         <div class="details">
-          <h3>Baby Papadam</h3>
+          <h3>Red Sun Baby Papadam</h3>
           <p class="pack">50g Pack · Approx. 14 pieces</p>
+          <span class="offer-label">SPECIAL OFFER</span>
+          <div class="old-price">Rs. 110/-</div>
           <div class="price">Rs. 90/-</div>
-          <a class="order" href="https://wa.me/94752601907?text=I%20want%20Baby%20Papadam%2050g%20Rs.%2090">Order on WhatsApp</a>
+          <a class="order" href="#customer-order" data-product="Red Sun Baby Papadam">Order Now</a>
         </div>
       </article>
 
       <article class="card">
-        <img src="regular-papadam.jpg" alt="Regular Papadam" loading="lazy" decoding="async">
+        <img src="regular-papadam.jpg" alt="Red Sun 100g Papadam" loading="lazy">
         <div class="details">
-          <h3>Regular Papadam</h3>
+          <h3>Red Sun 100g Papadam</h3>
           <p class="pack">100g Pack · Approx. 16 pieces</p>
+          <span class="offer-label">SPECIAL OFFER</span>
+          <div class="old-price">Rs. 200/-</div>
           <div class="price">Rs. 180/-</div>
-          <a class="order" href="https://wa.me/94752601907?text=I%20want%20Regular%20Papadam%20100g%20Rs.%20180">Order on WhatsApp</a>
+          <a class="order" href="#customer-order" data-product="Red Sun 100g Papadam">Order Now</a>
         </div>
       </article>
 
       <article class="card">
-        <img src="pepper-papadam.jpg" alt="Pepper Papadam" loading="lazy" decoding="async">
+        <img src="pepper-papadam.jpg" alt="Masala Papadam" loading="lazy">
         <div class="details">
-          <h3>Pepper Papadam</h3>
+          <h3>Masala Papadam</h3>
           <p class="pack">100g Pack · Approx. 10 pieces</p>
+          <span class="offer-label">SPECIAL OFFER</span>
+          <div class="old-price">Rs. 240/-</div>
           <div class="price">Rs. 210/-</div>
-          <a class="order" href="https://wa.me/94752601907?text=I%20want%20Pepper%20Papadam%20100g%20Rs.%20210">Order on WhatsApp</a>
+          <a class="order" href="#customer-order" data-product="Masala Papadam">Order Now</a>
         </div>
       </article>
 
       <article class="card">
-        <img src="classic-papadam.png" alt="Classic Papadam" loading="lazy" decoding="async">
+        <img src="classic-papadam.png" alt="Classic Papadam" loading="lazy">
         <div class="details">
           <h3>Classic Papadam</h3>
           <p class="pack">1kg Pack · Approx. 80 pieces</p>
+          <span class="offer-label">SPECIAL OFFER</span>
+          <div class="old-price">Rs. 800/-</div>
           <div class="price">Rs. 700/-</div>
-          <a class="order" href="https://wa.me/94752601907?text=I%20want%20Classic%20Papadam%201kg%20Rs.%20700">Order on WhatsApp</a>
+          <a class="order" href="#customer-order" data-product="Classic Papadam">Order Now</a>
         </div>
       </article>
 
       <article class="card">
-        <img src="classic-baby-papadam.png" alt="Classic Baby Papadam with cumin seeds" loading="lazy" decoding="async">
+        <img src="classic-baby-papadam.png" alt="Classic Baby Papadam with cumin" loading="lazy">
         <div class="details">
           <h3>Classic Baby Papadam</h3>
           <p class="pack">1kg Pack · Approx. 240 pieces · Jeeragam</p>
+          <span class="offer-label">SPECIAL OFFER</span>
+          <div class="old-price">Rs. 1,000/-</div>
           <div class="price">Rs. 900/-</div>
-          <a class="order" href="https://wa.me/94752601907?text=I%20want%20Classic%20Baby%20Papadam%201kg%20Rs.%20900">Order on WhatsApp</a>
+          <a class="order" href="#customer-order" data-product="Classic Baby Papadam">Order Now</a>
         </div>
       </article>
 
       <article class="card">
-        <img src="janatha-large-papadam.jpg" alt="Janatha Papadam Large Pack" loading="lazy" decoding="async">
+        <img src="janatha-large-papadam.jpg" alt="Janatha Papadam Large Pack" loading="lazy">
         <div class="details">
           <h3>Janatha Papadam Large Pack</h3>
           <p class="pack">1kg Pack · Approx. 55 pieces</p>
+          <span class="offer-label">SPECIAL OFFER</span>
+          <div class="old-price">Rs. 1,000/-</div>
           <div class="price">Rs. 900/-</div>
-          <a class="order" href="https://wa.me/94752601907?text=I%20want%20Janatha%20Papadam%20Large%20Pack%201kg%20Rs.%20900">Order on WhatsApp</a>
+          <a class="order" href="#customer-order" data-product="Janatha Papadam Large Pack">Order Now</a>
         </div>
       </article>
 
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMER ORDER SECTION -->
+<section class="section order-section" id="customer-order">
+  <div class="container">
+    <div class="heading">
+      <small>Place Your Order</small>
+      <h2>Customer Order Form</h2>
+      <p>Fill in your details. Your order will be sent to us on WhatsApp.</p>
+    </div>
+
+    <div class="order-box">
+      <form id="customerOrderForm">
+
+        <div class="form-group">
+          <label for="customerName">Customer Name *</label>
+          <input id="customerName" type="text"
+                 placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="customerPhone">Phone Number *</label>
+          <input id="customerPhone" type="tel"
+                 placeholder="Enter your contact number"
+                 required>
+        </div>
+
+        <div class="form-group">
+          <label for="customerAddress">Delivery Address *</label>
+          <textarea id="customerAddress" rows="3"
+                    placeholder="House number, street, town and district"
+                    required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="customerProduct">Select Papadam *</label>
+          <select id="customerProduct" required>
+            <option value="">-- Select a Product --</option>
+            <option value="Red Sun Baby Papadam - Rs. 90">Red Sun Baby Papadam - Rs. 90</option>
+            <option value="Red Sun 100g Papadam - Rs. 180">Red Sun 100g Papadam - Rs. 180</option>
+            <option value="Masala Papadam - Rs. 210">Masala Papadam - Rs. 210</option>
+            <option value="Classic Papadam 1kg - Rs. 700">Classic Papadam 1kg - Rs. 700</option>
+            <option value="Classic Baby Papadam 1kg - Rs. 900">Classic Baby Papadam 1kg - Rs. 900</option>
+            <option value="Janatha Papadam Large Pack 1kg - Rs. 900">Janatha Papadam Large Pack 1kg - Rs. 900</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="customerQuantity">Quantity (Number of Packs) *</label>
+          <input id="customerQuantity" type="number"
+                 min="1" max="500" value="1" required>
+        </div>
+
+        <div class="form-group">
+          <label for="paymentMethod">Payment Method</label>
+          <select id="paymentMethod">
+            <option value="Cash on Delivery (COD)">Cash on Delivery (COD)</option>
+            <option value="Please confirm payment options">Please confirm payment options</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="customerNotes">Additional Notes (Optional)</label>
+          <textarea id="customerNotes" rows="2"
+                    placeholder="Any special delivery instructions?"></textarea>
+        </div>
+
+        <p class="form-note">
+          * Required fields. Islandwide COD enquiries welcome.
+          Delivery availability and charges will be confirmed by S.R.A Industries.
+          Order details are sent through WhatsApp; this form does not process online payments.
+        </p>
+
+        <button class="order-submit" type="submit">
+          📲 Submit Order on WhatsApp
+        </button>
+
+      </form>
     </div>
   </div>
 </section>
@@ -292,7 +435,10 @@ footer a {color:#a9e8c7}
   <div class="container">
     <h2>Wholesale Orders Welcome!</h2>
     <p>Wholesale customers can enjoy lower prices. Contact us on WhatsApp for wholesale rates and availability.</p>
-    <a class="button" href="https://wa.me/94752601907?text=Hello%2C%20please%20send%20me%20your%20wholesale%20papadam%20prices.">Enquire Wholesale Prices</a>
+    <a class="button"
+       href="https://wa.me/94752601907?text=Hello%2C%20please%20send%20me%20your%20wholesale%20papadam%20prices.">
+       Enquire Wholesale Prices
+    </a>
   </div>
 </section>
 
@@ -322,7 +468,9 @@ footer a {color:#a9e8c7}
     <p>For orders, wholesale prices and delivery enquiries:</p>
     <p><strong>WhatsApp: +94 75 260 1907</strong></p>
     <p>Islandwide COD enquiries welcome. Delivery availability and charges will be confirmed.</p>
-    <a class="button" href="https://wa.me/94752601907?text=Hello%20S.R.A%20Industries">Chat on WhatsApp</a>
+    <a class="button" href="https://wa.me/94752601907?text=Hello%20S.R.A%20Industries">
+      Chat on WhatsApp
+    </a>
   </div>
 </section>
 
@@ -338,7 +486,10 @@ footer a {color:#a9e8c7}
   </div>
 </footer>
 
-<a class="float-wa" href="https://wa.me/94752601907?text=Hello%20S.R.A%20Industries">WhatsApp</a>
+<a class="float-wa"
+   href="https://wa.me/94752601907?text=Hello%20S.R.A%20Industries">
+   WhatsApp
+</a>
 
 <script>
 const menuBtn = document.getElementById("menuBtn");
@@ -346,7 +497,8 @@ const navLinks = document.getElementById("navLinks");
 
 menuBtn.addEventListener("click", function () {
   navLinks.classList.toggle("open");
-  menuBtn.textContent = navLinks.classList.contains("open") ? "✕" : "☰";
+  menuBtn.textContent =
+    navLinks.classList.contains("open") ? "✕" : "☰";
 });
 
 navLinks.querySelectorAll("a").forEach(function (link) {
@@ -356,7 +508,69 @@ navLinks.querySelectorAll("a").forEach(function (link) {
   });
 });
 
-document.getElementById("year").textContent = new Date().getFullYear();
+// Select product automatically when a product card is clicked
+document.querySelectorAll(".card .order").forEach(function (link) {
+  link.addEventListener("click", function () {
+    const productName = this.dataset.product;
+    const select = document.getElementById("customerProduct");
+
+    for (let i = 0; i < select.options.length; i++) {
+      if (select.options[i].text.startsWith(productName)) {
+        select.selectedIndex = i;
+        break;
+      }
+    }
+  });
+});
+
+// Send customer order details to WhatsApp
+document.getElementById("customerOrderForm")
+.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const name = document.getElementById("customerName").value.trim();
+  const phone = document.getElementById("customerPhone").value.trim();
+  const address = document.getElementById("customerAddress").value.trim();
+  const product = document.getElementById("customerProduct").value;
+  const quantity = document.getElementById("customerQuantity").value;
+  const payment = document.getElementById("paymentMethod").value;
+  const notes = document.getElementById("customerNotes").value.trim();
+
+  if (!name || !phone || !address || !product || !quantity) {
+    alert("Please fill in all required fields.");
+    return;
+  }
+
+  if (!/^[0-9+\s()-]{7,20}$/.test(phone)) {
+    alert("Please enter a valid phone number.");
+    return;
+  }
+
+  const message =
+`NEW CUSTOMER ORDER - S.R.A INDUSTRIES
+
+Customer Name: ${name}
+Phone Number: ${phone}
+Delivery Address: ${address}
+
+Product: ${product}
+Quantity: ${quantity} pack(s)
+Payment: ${payment}
+
+Additional Notes: ${notes || "None"}
+
+Please confirm my order, delivery availability and charges.
+
+Website: https://sraindustries.github.io/papadam.lk/`;
+
+  const whatsappURL =
+    "https://wa.me/94752601907?text=" + encodeURIComponent(message);
+
+  window.open(whatsappURL, "_blank");
+});
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 </script>
 
 </body>
